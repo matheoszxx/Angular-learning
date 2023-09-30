@@ -10,18 +10,19 @@ export class TitleComponent implements OnInit, OnChanges {
 	@Input() nome: string = ''
 
   constructor() {
-		console.log("Construtor");
+		console.log(`Construtor ${this.nome}`);
 
 	}
 	//OnChanges está atrelado com o @Input (só ocorre a mundança se passar pelo input)
 	ngOnChanges(): void {
-		console.log("OnChange");
+		console.log(`ngOnChanges ${this.nome}`);
 
 	}
 
 	//lifeCycle = momento de vida inicial (primeira coisa que executa)
 	ngOnInit(): void {
-		console.log("OnInit");
+		this.nome += 'x'
+		console.log(`ngOnInit ${this.nome}`);
 
 
 

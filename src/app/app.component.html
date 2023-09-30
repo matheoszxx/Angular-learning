@@ -1,4 +1,5 @@
 <h1>My app</h1>
-<app-title nome="Produto 1"></app-title>
-<app-title nome="Produto 2	"></app-title>
+<!-- *ngIf = VERIFICA SE UM CONTEUDO DEVE SER EXIBIDO (SE TIVER FALSE NÃO EXIBE) -->
+<app-check-sample *ngIf="isAliveCheckSample"></app-check-sample>
+<button (click)="disposeCheckSample()">Destruir</button>
 <router-outlet></router-outlet>
